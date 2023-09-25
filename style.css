@@ -1,8 +1,101 @@
+:root {
+      --black: #272829;
+      --darkBlue: #61677A;
+      --lightBlue: #D8D9DA;
+      --cream: #FFF6E0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Rubik&display=swap');
+
+* {
+      font-family: 'Playfair Display', serif;
+}
+
 body {
-      margin: 0;
-      background-image: linear-gradient(180deg, #93C4D1, #18363E);
-      height: 100vh;
+      background-color: var(--black);
       color: #F1F1F1;
+      top: 0;
+      position: relative;
+      width: 100vw;
+      margin: 0;
+}
+
+#backgroundWrapper {
+      padding: 3rem;
+      background-color: #272829d0;
+
+}
+
+#pictureCollage {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100vw;
+      margin-bottom: 70px;
+
+}
+
+#backgroundInfo {
+      background: url(./images/photographyImages/chipmunk.JPG);
+      color: var(--cream);
+      background-size: cover;
+      background-repeat: none;
+      top: 0;
+      width: 100vw;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+            0 2px 2px rgba(0, 0, 0, 0.12),
+            0 4px 4px rgba(0, 0, 0, 0.12),
+            0 8px 8px rgba(0, 0, 0, 0.12),
+            0 16px 16px rgba(0, 0, 0, 0.12);
+      ;
+}
+
+.backgroundHeader {
+      width: 80%;
+}
+
+main {
+      width: 95%;
+      overflow: hidden;
+}
+
+.card {
+      width: 200px;
+      background-color: var(--darkBlue);
+      color: var(--cream);
+      margin: 1rem auto;
+      border-radius: 10px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+            0 2px 2px rgba(0, 0, 0, 0.12),
+            0 4px 4px rgba(0, 0, 0, 0.12),
+            0 8px 8px rgba(0, 0, 0, 0.12),
+            0 16px 16px rgba(0, 0, 0, 0.12);
+      ;
+}
+
+.cardHeader {
+      margin: 1rem 0;
+      line-height: 0.1rem;
+}
+
+h2 {
+      font-size: large;
+}
+
+p {
+      font-size: medium;
+}
+
+section {
+      margin-left: 1rem;
+      margin-top: 1rem;
+}
+
+img {
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      width: 200px;
+      height: 200px;
 }
 
 .mobileNavbar {
@@ -12,10 +105,17 @@ body {
       width: 100%;
       display: flex;
       justify-content: space-around;
-      background-color: #2D5F6E;
-      color: #F1F1F1;
+      background-color: var(--cream);
+      color: var(--darkBlue);
       width: 100%;
       box-shadow: -3px#18363e99, ;
+      overflow: hidden;
+
+}
+
+.mobileNavbar a {
+      font-family: 'Playfair Display', serif;
+
 }
 
 .normalNavbar {
@@ -30,13 +130,47 @@ body {
       flex-direction: column;
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
-      color: #F1F1F1;
+      color: var(--darkBlue);
 }
 
 .icon i {
       width: 50px;
       margin-bottom: 5px;
+}
 
+footer {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 65px;
+      justify-content: space-around;
+      background-color: var(--darkBlue);
+}
+
+#footerName {
+      margin: auto 0;
+}
+
+#socialMedia {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      justify-content: space-around;
+      margin: auto 0;
+}
+
+li h3 {
+      margin: 0;
+}
+
+#socialLink:hover {
+      color: var(--lightBlue)
+}
+
+.Socialtext {
+      text-decoration: none;
+      color: var(--cream)
 }
 
 @media screen and (min-width: 600px) {
@@ -47,22 +181,72 @@ body {
       .normalNavbar {
             display: flex;
             justify-content: space-around;
-            background-color: #2D5F6E;
-            color: #F1F1F1;
+            background-color: var(--cream);
+            color: var(--darkBlue);
             width: 100%;
             height: 75px;
             margin: 0 auto;
             box-shadow: 3px#18363e99, ;
-
+            position: fixed;
+            top: 0;
       }
 
       .normalNavbar a {
             width: 25%;
+            font-family: 'Playfair Display', serif;
+            font-size: larger;
+      }
+
+      #backgroundInfo {
+            margin-top: 75px;
       }
 
       .normalNavbar a:hover {
-            background-color: #18363E;
-
+            transform: translateY(0px);
+            transition: 0.2s;
+            box-shadow: 0px 10px 20px 2px var(--black);
+            border-radius: 15px;
+            border-color: var(--darkBlue);
+            border-style: solid;
+            border-width: 2px;
+            width: 20%;
+            height: 60px;
+            margin-top: 5px;
       }
-}
+
+      #pictureCollage {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+      }
+
+      .card {
+            width: 400px;
+            background-color: var(--darkBlue);
+            color: var(--cream);
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+                  0 2px 2px rgba(0, 0, 0, 0.12),
+                  0 4px 4px rgba(0, 0, 0, 0.12),
+                  0 8px 8px rgba(0, 0, 0, 0.12),
+                  0 16px 16px rgba(0, 0, 0, 0.12);
+            ;
+      }
+
+      img {
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            width: 400px;
+            height: 400px;
+      }
+
+      main {
+            margin: 0 auto;
+      }
+
+      footer {
+            bottom: 0;
+            margin: 0;
+      }
 }
